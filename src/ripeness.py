@@ -16,19 +16,10 @@ def compute_ripeness_features(rgb, banana_mask):
     V_b = V[banana_mask]
 
     
-
-    
     sat_min = 0.20
-
-   
     green_lo, green_hi = 0.20, 0.45
-
-    
     yellow_lo, yellow_hi = 0.10, 0.20
-
-    
     dark_v_thresh = 0.35
-
     colored = S_b > sat_min
 
     green = colored & (H_b >= green_lo) & (H_b <= green_hi)
